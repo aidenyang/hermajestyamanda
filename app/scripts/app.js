@@ -9,7 +9,6 @@ angular.module('hermajestyamandaApp', [])
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'about-control'
       })
       .otherwise({
         redirectTo: '/hermajesty'
