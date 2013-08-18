@@ -5,7 +5,7 @@ angular.module('hermajestyamandaApp')
 .controller('main-control', function ($scope, $http) {
 	$scope.notReady = true;
 	$scope.bynestweet = "loading...";
-	$scope.randompicindex = Math.floor((Math.random()*10)+0);
+	$scope.randompicindex = Math.floor((Math.random()*27)+1);
 
 	var params= {
 		screen_name:"amandabynes",
@@ -33,7 +33,7 @@ angular.module('hermajestyamandaApp')
 			for (var i=0; i<$scope.timelinelength; i++){
 				$scope.tweets.push(data[i].text);	
 			}
-			$scope.randompicindex = Math.floor((Math.random()*10)+0);
+			$scope.randompicindex = Math.floor((Math.random()*27)+1);
 			$scope.randomtweetindex = Math.floor((Math.random()*$scope.timelinelength)+0);
 			$scope.bynestweet = $scope.tweets[$scope.randomtweetindex];
 			$scope.notReady = false;
@@ -43,7 +43,7 @@ angular.module('hermajestyamandaApp')
 		true
 		);
 	$scope.newpair = function(){
-		$scope.randompicindex = Math.floor((Math.random()*10)+0);
+		$scope.randompicindex = Math.floor((Math.random()*27)+1);
 		$scope.randomtweetindex = Math.floor((Math.random()*$scope.timelinelength)+0);
 		$scope.bynestweet = $scope.bynestweet = $scope.tweets[$scope.randomtweetindex];
 

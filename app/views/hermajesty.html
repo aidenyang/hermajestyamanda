@@ -1,4 +1,6 @@
-<button ng-hide="notReady" ng-click="newpair()">Again!</button>
+<a href="#" ng-hide="notReady" ng-click="newpair(); $event.preventDefault()">Generate another</a>
+<br/>
+<br />
 <div class="majesty">
 		<img ng-src="img/{{randompicindex}}.jpg"/>
 </div>
